@@ -12,7 +12,7 @@ pkg  <- cbind(c("CDatanet", "2021-02-17"),
               c("PartialNetwork", "2023-08-22"), 
               c("QuantilePeer", "2025-06-01"))
 
-npkgs <- ncol(pkgdata)
+npkgs <- ncol(pkg)
 dwlds <- matrix(NA, npkgs, 2)
 
 ##### Create json for each package
