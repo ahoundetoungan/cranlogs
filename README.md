@@ -36,7 +36,7 @@ This repository automatically computes the number of CRAN downloads for my R pac
 
 **QuantilePeer**<br>
 [![GitHub](https://img.shields.io/badge/-GitHub-gray.svg)](https://github.com/ahoundetoungan/QuantilePeer)
-[![R-universe](https://ahoundetoungan.r-universe.dev/badges/QuantilePeer)](https://ahoundetoungan.r-universe.dev/QuantilePeer)
+![R-universe](https://img.shields.io/badge/R--universe-not%20yet-lightgrey)
 [![CRAN](https://www.r-pkg.org/badges/version/QuantilePeer)](https://CRAN.R-project.org/package=QuantilePeer)
 [![CRAN Downloads](https://img.shields.io/endpoint?url=https://ahoundetoungan.github.io/cranlogs/badges/QuantilePeer.json)](https://cran.r-project.org/package=QuantilePeer)
 <br>
