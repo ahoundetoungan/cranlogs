@@ -56,7 +56,7 @@ jsonlite::write_json(dwlds, "badges/allpackages.json", auto_unbox = TRUE)
 json <- list(
   schemaVersion = 1,
   label = "CRAN",
-  message = paste0(dwlds[1], " downloads"),
+  message = paste0(dwlds$total, " downloads"),
   color = "blue"
 )
 jsonlite::write_json(json, "badges/alltotal.json", auto_unbox = TRUE)
@@ -65,7 +65,7 @@ jsonlite::write_json(json, "badges/alltotal.json", auto_unbox = TRUE)
 json <- list(
   schemaVersion = 1,
   label = "CRAN (last 6 months)",
-  message = paste0(dwlds[2], " downloads"),
+  message = paste0(dwlds$semester, " downloads"),
   color = "blue"
 )
 jsonlite::write_json(json, "badges/allsemester.json", auto_unbox = TRUE)
