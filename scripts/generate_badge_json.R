@@ -2,28 +2,68 @@
 library(cranlogs)
 library(jsonlite)
 
-pkg <- "vMF"
-downloads <- cran_downloads(pkg, from = "2022-11-21")
-total <- sum(downloads$count)
-
-# Format number
-label <- if (total >= 1e6) {
-  paste0(round(total / 1e6, 1), "M")
-} else if (total >= 1e4) {
-  paste0(round(total / 1e3), "K")
-} else {
-  as.character(total)
-}
-
-json <- list(
-  schemaVersion = 1,
-  label = "",
-  message = paste0(label, " downloads"),
-  color = "blue"
-)
-
-# Save JSON
-# Remove everything in badges/
+##### Remove everything in badges/
 unlink("badges", recursive = TRUE)
 dir.create("badges", showWarnings = FALSE)
-write_json(json, "badges/cran_downloads.json", auto_unbox = TRUE)
+
+##### Packages and dates
+pkg  <- cbind(c("CDatanet", "2021-02-17"),
+              c("vMF", "2022-11-21"),
+              c("PartialNetwork", "2023-08-22"), 
+              c("QuantilePeer", "2025-06-01"))
+
+npkgs <- ncol(pkgdata)
+dwlds <- matrix(NA, npkgs, 2)
+
+##### Create json for each package
+for (k in 1:npkgs) {
+  downloads   <- cran_downloads(pkg[1, k], from = pkg[2, k])
+  totd        <- sum(downloads$count)
+  mond        <- sum(downloads[downloads$date >= Sys.Date() - 182,]$count)
+  dwlds[k, 1] <- totd
+  dwlds[k, 2] <- mond
+  
+  # Format number
+  label     <- if (totd >= 1e6) {
+    paste0(format(round(totd / 1e6, 1), big.mark = ","), "M")
+  } else if (totd >= 1e4) {
+    paste0(format(round(totd / 1e3), big.mark = ","), "K")
+  } else {
+    format(as.character(totd), big.mark = ",")
+  }
+  
+  json      <- list(
+    schemaVersion = 1,
+    label = "",
+    message = paste0(label, " downloads"),
+    color = "blue"
+  )
+  
+  # Save JSON
+  write_json(json, paste0("badges/", pkg[1, k],  ".json"), auto_unbox = TRUE)
+}
+
+
+##### Create general badge
+dwlds <- colSums(dwlds)
+dwlds <- list(total    = format(dwlds[1], big.mark = ","), 
+              semester = format(dwlds[2], big.mark = ","))
+jsonlite::write_json(dwlds, "badges/allpackages.json", auto_unbox = TRUE)
+
+## Total downloads since first release
+json <- list(
+  schemaVersion = 1,
+  label = "CRAN",
+  message = paste0(dwlds[1], " downloads"),
+  color = "blue"
+)
+jsonlite::write_json(json, "badges/alltotal.json", auto_unbox = TRUE)
+
+## Downloads in the last 6 months
+json <- list(
+  schemaVersion = 1,
+  label = "CRAN (last 6 months)",
+  message = paste0(dwlds[2], " downloads"),
+  color = "blue"
+)
+jsonlite::write_json(json, "badges/allsemester.json", auto_unbox = TRUE)
