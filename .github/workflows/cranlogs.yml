@@ -2,7 +2,7 @@ name: Build and deploy CRAN download badge
 
 on:
   schedule:
-    - cron: 40 23 * * *
+    - cron: '45 23 * * *'
   workflow_dispatch:
 
 jobs:
