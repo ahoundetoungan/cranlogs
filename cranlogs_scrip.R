@@ -14,12 +14,13 @@ pkg  <- cbind(c("CDatanet", "2021-02-17"),
 
 npkgs <- ncol(pkg)
 dwlds <- matrix(NA, npkgs, 2)
+today <- Sys.Date()
 
 ##### Create json for each package
 for (k in 1:npkgs) {
   downloads   <- cran_downloads(pkg[1, k], from = pkg[2, k])
   totd        <- sum(downloads$count)
-  mond        <- sum(downloads[downloads$date >= Sys.Date() - 182,]$count)
+  mond        <- sum(downloads[downloads$date >= today - 182,]$count)
   dwlds[k, 1] <- totd
   dwlds[k, 2] <- mond
   
@@ -46,7 +47,8 @@ for (k in 1:npkgs) {
 
 ##### Create general badge
 dwlds <- colSums(dwlds)
-dwlds <- list(total    = format(dwlds[1], big.mark = ","), 
+dwlds <- list(date     = format(today, "%B %d, %Y"),
+              total    = format(dwlds[1], big.mark = ","), 
               semester = format(dwlds[2], big.mark = ","))
 jsonlite::write_json(dwlds, "badges/allpackages.json", auto_unbox = TRUE)
 
