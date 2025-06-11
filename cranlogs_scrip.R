@@ -25,13 +25,7 @@ for (k in 1:npkgs) {
   dwlds[k, 2] <- mond
   
   # Format number
-  label     <- if (totd >= 1e6) {
-    paste0(format(round(totd / 1e6, 1), big.mark = ","), "M")
-  } else if (totd >= 1e4) {
-    paste0(format(round(totd / 1e3), big.mark = ","), "K")
-  } else {
-    format(as.character(totd), big.mark = ",")
-  }
+  label     <- format(totd, big.mark = ",")
   
   json      <- list(
     schemaVersion = 1,
