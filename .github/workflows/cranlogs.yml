@@ -2,8 +2,8 @@ name: Build and deploy CRAN download badge
 
 on:
   schedule:
-    - cron: '30 23 * * 0'  # Sunday at 23:30 UTC
-    - cron: '30 23 * * 3'  # Wednesday at 23:30 UTC
+    - cron: '30 23 * * 1'  # Monday at 23:30 UTC
+    - cron: '30 23 * * 4'  # Thursday at 23:30 UTC
   workflow_dispatch:
 
 jobs:

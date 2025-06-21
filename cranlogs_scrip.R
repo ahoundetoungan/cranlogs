@@ -14,7 +14,7 @@ pkg  <- cbind(c("CDatanet", "2021-02-17"),
 
 npkgs <- ncol(pkg)
 dwlds <- matrix(NA, npkgs, 2)
-today <- Sys.Date()
+today <- Sys.Date() - 1
 
 ##### Create json for each package
 for (k in 1:npkgs) {
