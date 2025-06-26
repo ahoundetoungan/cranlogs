@@ -34,7 +34,7 @@ This repository automatically computes the number of CRAN downloads for my R pac
 <br>
 
 
-**QuantilePeer**<br>, *first released in June 2025*
+**QuantilePeer**, *first released in June 2025*
 <br>
 [![GitHub](https://img.shields.io/badge/-GitHub-gray.svg)](https://github.com/ahoundetoungan/QuantilePeer)
 [![R-universe](https://ahoundetoungan.r-universe.dev/badges/QuantilePeer)](https://ahoundetoungan.r-universe.dev/QuantilePeer)
