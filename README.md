@@ -9,7 +9,7 @@ This repository automatically computes the number of CRAN downloads for my R pac
 <br>
 <br>
 
-**CDatanet**
+**CDatanet**, first released in February 2021
 <br>
 [![GitHub](https://img.shields.io/badge/-GitHub-gray.svg)](https://github.com/ahoundetoungan/CDatanet)
 [![R-universe](https://ahoundetoungan.r-universe.dev/badges/CDatanet)](https://ahoundetoungan.r-universe.dev/CDatanet)
@@ -17,14 +17,14 @@ This repository automatically computes the number of CRAN downloads for my R pac
 [![CRAN Downloads](https://img.shields.io/endpoint?url=https://ahoundetoungan.github.io/cranlogs/badges/CDatanet.json)](https://cran.r-project.org/package=CDatanet)
 <br>
 
-**vMF**<br>
+**vMF**<br>, first released in November 2022
 [![GitHub](https://img.shields.io/badge/-GitHub-gray.svg)](https://github.com/ahoundetoungan/vMF)
 [![R-universe](https://ahoundetoungan.r-universe.dev/badges/vMF)](https://ahoundetoungan.r-universe.dev/vMF)
 [![CRAN](https://www.r-pkg.org/badges/version/vMF)](https://CRAN.R-project.org/package=vMF)
 [![CRAN Downloads](https://img.shields.io/endpoint?url=https://ahoundetoungan.github.io/cranlogs/badges/vMF.json)](https://cran.r-project.org/package=vMF)
 <br>
 
-**PartialNetwork**<br>
+**PartialNetwork**<br>, first released in August 2023
 [![GitHub](https://img.shields.io/badge/-GitHub-gray.svg)](https://github.com/ahoundetoungan/PartialNetwork)
 [![R-universe](https://ahoundetoungan.r-universe.dev/badges/PartialNetwork)](https://ahoundetoungan.r-universe.dev/PartialNetwork)
 [![CRAN](https://www.r-pkg.org/badges/version/PartialNetwork)](https://CRAN.R-project.org/package=PartialNetwork)
@@ -32,7 +32,7 @@ This repository automatically computes the number of CRAN downloads for my R pac
 <br>
 
 
-**QuantilePeer**<br>
+**QuantilePeer**<br>, first released in June 2025
 [![GitHub](https://img.shields.io/badge/-GitHub-gray.svg)](https://github.com/ahoundetoungan/QuantilePeer)
 [![R-universe](https://ahoundetoungan.r-universe.dev/badges/QuantilePeer)](https://ahoundetoungan.r-universe.dev/QuantilePeer)
 [![CRAN](https://www.r-pkg.org/badges/version/QuantilePeer)](https://CRAN.R-project.org/package=QuantilePeer)
