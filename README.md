@@ -41,3 +41,10 @@ This repository automatically computes the number of CRAN downloads for my R pac
 [![CRAN](https://www.r-pkg.org/badges/version/QuantilePeer)](https://CRAN.R-project.org/package=QuantilePeer)
 [![CRAN Downloads](https://img.shields.io/endpoint?url=https://ahoundetoungan.github.io/cranlogs/badges/QuantilePeer.json)](https://cran.r-project.org/package=QuantilePeer)
 <br>
+
+**AsyPeer**, *first released in August 2025*
+<br>
+[![GitHub](https://img.shields.io/badge/-GitHub-gray.svg)](https://github.com/MathieuLambotte/AsyPeer)
+[![CRAN](https://www.r-pkg.org/badges/version/AsyPeer)](https://CRAN.R-project.org/package=AsyPeer)
+[![CRAN Downloads](https://img.shields.io/endpoint?url=https://ahoundetoungan.github.io/cranlogs/badges/AsyPeer.json)](https://cran.r-project.org/package=AsyPeer)
+<br>

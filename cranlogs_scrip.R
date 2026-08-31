@@ -10,7 +10,8 @@ dir.create("badges", showWarnings = FALSE)
 pkg  <- cbind(c("CDatanet", "2021-02-17"),
               c("vMF", "2022-11-21"),
               c("PartialNetwork", "2023-08-22"), 
-              c("QuantilePeer", "2025-06-19"))
+              c("QuantilePeer", "2025-06-19"),
+              c("AsyPeer", "2026-08-31"))
 
 npkgs <- ncol(pkg)
 dwlds <- matrix(NA, npkgs, 2)
